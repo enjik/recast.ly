@@ -68,7 +68,7 @@ describe('searchYouTube', function() {
   // though it will not necessarily have the same values.
   it('should GET videos with the same shape as `exampleVideoData`', function(done) {
     var options = {
-      key: window.YOUTUBE_API_KEY,
+      key: 'AIzaSyBDZlIEshy4Ci-11-ZR4rTsGqtw0_iEbIw',
       query: 'react',
       max: 5
     };
@@ -77,6 +77,7 @@ describe('searchYouTube', function() {
     xhr.restore();
 
     searchYouTube(options, (data) => {
+      debugger;
       expect(hasSameShape(data, window.exampleVideoData)).to.be.true;
       done();
     });
