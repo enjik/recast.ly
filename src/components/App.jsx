@@ -21,9 +21,9 @@ class App extends React.Component {
     return (
       <div>
         <nav className="navbar">
-        <div className="col-md-6 offset-md-3">
-          <Search handleSearch={this.debouncedHandleSearch.bind(this)}/>
-        </div>
+          <div className="col-md-6 offset-md-3">
+            <Search handleSearch={this.debouncedHandleSearch.bind(this)}/>
+          </div>
         </nav>
         <div className="row">
           <div className="col-md-7">
@@ -34,7 +34,7 @@ class App extends React.Component {
           </div>
         </div>
       </div>
-    )
+    );
 
   }
   
@@ -51,7 +51,6 @@ class App extends React.Component {
       key: window.YOUTUBE_API_KEY,
       query: query,
       max: 5,
-      
     };
 
     this.props.searchYouTube(data, function(data) {
